@@ -16,7 +16,6 @@ import (
 	"github.com/ipfs/ipfs-cluster/connector"
 	. "github.com/ipfs/ipfs-cluster/informer"
 	"github.com/ipfs/ipfs-cluster/ipfscluster"
-	"github.com/ipfs/ipfs-cluster/logger"
 	"github.com/ipfs/ipfs-cluster/state"
 	"github.com/ipfs/ipfs-cluster/tracker"
 	"github.com/ipfs/ipfs-cluster/util"
