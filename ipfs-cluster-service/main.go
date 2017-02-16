@@ -8,14 +8,13 @@ import (
 	"os/user"
 	"path/filepath"
 
-	logging "github.com/ipfs/go-log"
-	ma "github.com/multiformats/go-multiaddr"
-	"github.com/urfave/cli"
-
+	"github.com/Sirupsen/logrus"
 	ipfscluster "github.com/ipfs/ipfs-cluster"
 	"github.com/ipfs/ipfs-cluster/allocator/numpinalloc"
 	"github.com/ipfs/ipfs-cluster/informer/numpin"
 	"github.com/ipfs/ipfs-cluster/state/mapstate"
+	ma "github.com/multiformats/go-multiaddr"
+	"github.com/urfave/cli"
 )
 
 // ProgramName of this application
@@ -85,7 +84,7 @@ $ ipfs-cluster-service --bootstrap /ip4/192.168.1.2/tcp/9096/ipfs/QmPSoSaPXpyuna
 	DefaultPath,
 	DefaultConfigFile)
 
-var logger = logging.Logger("service")
+var logger = logrus.New()
 
 // Default location for the configurations and data
 var (
